@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- aos css link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="images/samplelogo.PNG">
+    <title>Results</title>
+    <style>
+        @font-face {
+    font-family: DM-Sans;
+    src: url(../FONTS/DMSans-Regular.ttf);
+}
+        *{
+            color: white;
+            font-family: DM-Sans;
+        }
+        body{
+            background: rgb(32, 32, 32);
+        }
+        /* .container{
+            display: flex;
+            align-items: center;
+        } */
+        .wrapper{
+            width: 80vw;
+            height: 80vh;
+            border-radius: 20px;
+            border: none;
+            position: absolute;
+            top:50%;
+            left:50%;
+            -webkit-box-shadow: 0px 0px 80px 0px rgba(51,50,51,1);
+            -moz-box-shadow: 0px 0px 80px 0px rgba(51,50,51,1);
+            box-shadow: 0px 0px 80px 0px rgba(51,50,51,1);
+            transform: translate(-50%, -50%);
+            background-color: #0e1320;
+            overflow: auto;
+        }
+        .heading{
+            text-align: center;
+        }
+        .section{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        td{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="heading">
+
+                <h1>What We Have Have Found</h1>
+            </div>
+            <div class="section">
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                    <td>Safe: <span>#</span></td>
+                    </tr>
+                    <tr>
+                    <td>Domain: <span>#</span></td>
+                    </tr>
+                    <tr>
+                    <td>Malware: <span>#</span></td>
+                    </tr>
+                    <tr>
+                    <td>Risk Score:<span>#</span></td>
+                    </tr>
+                    <tr>
+                    <td>Spamming Domain: <span>#</span></td>
+                    </tr>
+                    <tr>
+                    <td>Page Size: <span>#</span></td>
+                    </tr>
+                    <tr>
+                    <td>Content Type: <span>#</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                    <td>Suspicious: <span>#</span></td>
+                    </tr>
+                    <tr>
+                    <td>IP Address: <span>#</span></td>
+                    </tr>
+                    <tr>
+                    <td>Phishing: <span>#</span></td>
+                    </tr>
+                    <tr>
+                    <td>Parked Domain: <span>#</span></td>
+                    </tr>
+                    <tr>
+                    <td>HTTP Status Code: <span>#</span></td>
+                    </tr>
+                    <tr>
+                    <td>Web Server: <span>#</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
