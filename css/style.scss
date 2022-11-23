@@ -41,6 +41,8 @@ p{
 }
 .nav img{
     padding: 15px;
+    width: 200px;
+    height: auto;
 }
 .nav a{
     text-decoration: none;
@@ -70,8 +72,11 @@ p{
 }
 /*HEADER MAIN SECTION*/ 
 .header_main, .sec{
-    padding-top: 100px;
+    padding-top: 50px;
     display: flex;
+}
+.header_main{
+    padding-top: 100px;
 }
 .h_main, .subsec{
     width: 50%;
@@ -119,6 +124,10 @@ p{
         font-size: 85px;
     }
 }
+.url_collect form{
+    position: relative;
+    margin: 0;  
+}
 .url_collect input{
     border: 1px solid var(--global-color);
     height: 50px;
@@ -127,9 +136,57 @@ p{
     box-shadow: 0px 5px 25px -10px rgb(129 2 255 / 51%);
     &::placeholder{
         font-size: 18px;
-        margin-left: 15px;
-        color:rgb(139, 136, 136);
+        padding-left: 20px;
     }
+}
+// INPUT ANIMATION START
+.form-item{
+    position: relative;
+    margin-bottom: 15px
+  }
+  .form-item input{
+    display: block;
+    width: 400px;
+    height: 40px;
+    background: transparent;
+    border: solid 1px #ccc;
+    transition: all .3s ease;
+    padding: 0 15px
+  }
+  .form-item input:focus{
+    border-color: var(--global-color);
+  }
+  .form-item label{
+    position: absolute;
+    cursor: text;
+    z-index: 2;
+    top: 13px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #fff;
+    padding: 0 10px;
+    color: #999;
+    transition: all .3s ease;
+  }
+  .form-item input:focus + label,
+  .form-item input:valid + label{
+    font-size: 11px;
+    top: -5px;
+  }
+  .form-item input:focus + label{
+    color: var(--global-color),
+  }
+// INPUT ANIMATION END 
+.url_collect label{
+    position: absolute;
+    top: 0;
+    font-size: 18px;
+    transform: translate(21px, 13px);
+}
+#urlpaset:focus + label{
+    transform:translateY(-5rem);
+    color: var(--global-color);
 }
 .url_collect button{
     padding: 15px 40px;
@@ -146,14 +203,20 @@ p{
         transition-timing-function: ease-out;
     }
 }
+
 .h_right img{
-    width: 80%;
-    height: 450px;
+    width: 67%;
+    height: auto;
     object-fit: cover;
-    border-radius: 20px;
     margin-left: 90px;
 }
-
+#progress{
+    background-color: #181E2C;
+    width: 180px;
+    transform: translate(19rem, -32rem);
+    border-radius: 20px;
+    
+}
 /*LOADER*/
 #loader {
     display: flex;
@@ -183,6 +246,7 @@ p{
   /*LOADER END*/
 
   /*ABOUT PROJECT SECTION*/
+
   #image1, #image2, #image3{
     object-fit: cover;
     border-radius: 20px;
@@ -234,7 +298,7 @@ p{
     color: #E3E2E5;
 }
 .fa-fingerprint{
-    font-size: 25px;
+    font-size: 20px;
     padding:8px 0;
 }
 .about_marg{
@@ -255,11 +319,12 @@ p{
 }
 #discription p{
     display: inline-block;
+    padding-left: 15px;
     margin: 5px auto;
 }
 /*TOOLS SECTION*/
 .tools_section{
-    padding: 100px 0;
+    padding: 60px 0;
 }
 .tools_wrapp{
     display:flex;
@@ -309,11 +374,51 @@ p{
 }
 /*ABOUT TEAM SECTION*/
 .about_team{
-    padding: 100px 0;
+    padding: 0;
+}
+.team_wrap div, #name_div{
+    padding:0;
+    width:100px;
+    height:50px;
+    background: linear-gradient(to left,#5E5DFF, #FF048B);
+}
+.team_wrap{
+    width: 50%;
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+}
+.about_r img:nth-child(1){
+    width:200px;
+}
+.about_r img:nth-child(2){
+    width:150px;
+    animation:alternate-reverse rotate 5s ease-in-out infinite;
+}
+.about_r img:nth-child(3){
+    width:80px;
+}
+.ab_team:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ani{
+    background-color: transparent;
+    animation:alternate rotate 5s ease-in-out infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 /*CONTACT US SECTION*/ 
 .contact_us{
     background: #121826;
+    padding-bottom: 100px;
 }
 .contact_us div,h1,p,h3,form{
     background: transparent;
@@ -358,5 +463,16 @@ form{
     &:hover{
         border: 2px solid var(--global-color);
         background: transparent;
+    }
+}
+@media only screen and(max-width: 770px)
+{
+    
+    .sec{
+        display: block;
+        width: auto;
+    }
+    .subsec{
+        width: auto;
     }
 }
