@@ -1,20 +1,25 @@
 @font-face {
-    font-family: DM-Sans;
-    src: url(../FONTS/DMSans-Regular.ttf);
+    font-family: DM-Sans-bold;
+    src: url(../FONTS/DMSans-Bold.ttf);
+}
+@font-face {
+    font-family: DM-Sans-regular;
+    src: url(../fonts/DMSans-Medium.ttf);
 }
 /*Root*/
 :root{
     --global-color: #8102FF;
 }
 *{
-    background: #0e1320;
+    font-family: DM-Sans-regular;
     color: white;
-    font-family: DM-Sans;
 }
 /*BODY*/
 html, body{
     padding: 0;
     margin: 0;
+    background: #0e1320;
+
     box-sizing: border-box;
 }
 h1,h2,h3,h4,h5,h6{
@@ -26,28 +31,32 @@ p{
 }
 /*CENTER*/
 .center {
+    background: #0e1320;
     max-width: 1248px;
     margin: 0 auto;
-    padding: 0 64px;
+    padding: 0 40px;
   }
   /*HEADER SECTION*/ 
 .header_section{
-    margin-top: 15px;
+    background: #0e1320;
+    margin-top: 20px;
     background: #0E1320;
 }
 /*HEADER NAV*/ 
 .header_nav, .nav{
     display: flex;
+    color: white;
 }
 .nav img{
-    padding: 15px;
-    width: 200px;
+    padding: 20px;
+    width: 250px;
     height: auto;
 }
 .nav a{
     text-decoration: none;
     justify-content: space-around;
     padding: 15px;
+    color: white;
     font-size: 16px;
     font-weight: bold;
     &:hover{
@@ -72,11 +81,13 @@ p{
 }
 /*HEADER MAIN SECTION*/ 
 .header_main, .sec{
+    background: #0e1320;
     padding-top: 50px;
     display: flex;
 }
 .header_main{
     padding-top: 100px;
+    height: auto;
 }
 .h_main, .subsec{
     width: 50%;
@@ -91,7 +102,7 @@ p{
     background-color: #8102ff4a;
     border-radius: 10px 10px 10px 10px;
     margin: 2px -5px 0px 0px;
-    padding: 8px 8px 8px 8px;
+    padding: 25px;
     height: 40px;
     width: 40px;
 }
@@ -104,14 +115,16 @@ p{
     font-variant: normal;
     text-rendering: auto;
     line-height: 1;
+    transform: translate(-22px, -20px);
     background: transparent;
-    font-size: 40px;
+    font-size: 45px;
     color: var(--global-color);
 }
 .small_heading h3{
     color: var(--global-color);
     margin-left: 15px;
     font-size: 23px;
+    font-family: DM-Sans-bold;
 }
 .h_left h2{
     line-height: 70px;
@@ -124,70 +137,53 @@ p{
         font-size: 85px;
     }
 }
-.url_collect form{
-    position: relative;
-    margin: 0;  
+.h_left p{
+    font-size: 20px;
+    color: #eee;
 }
+
+// INPUT ANIMATION START
+
+.url_collect{
+    position: relative;
+}
+
 .url_collect input{
+    background: transparent;
+    display: inline-block;
     border: 1px solid var(--global-color);
     height: 50px;
     width: 350px;
     border-radius: 8px;
-    box-shadow: 0px 5px 25px -10px rgb(129 2 255 / 51%);
-    &::placeholder{
-        font-size: 18px;
-        padding-left: 20px;
-    }
-}
-// INPUT ANIMATION START
-.form-item{
-    position: relative;
-    margin-bottom: 15px
-  }
-  .form-item input{
-    display: block;
-    width: 400px;
-    height: 40px;
-    background: transparent;
-    border: solid 1px #ccc;
     transition: all .3s ease;
-    padding: 0 15px
+    box-shadow: 0px 5px 25px -10px rgb(129 2 255 / 51%);
+}
+.url_collect input:focus{
+    outline: none;
   }
-  .form-item input:focus{
-    border-color: var(--global-color);
-  }
-  .form-item label{
+  .url_collect label{
     position: absolute;
     cursor: text;
     z-index: 2;
-    top: 13px;
-    left: 10px;
-    font-size: 12px;
+    top: 14px;
+    left: 12px;
+    font-size: 16px;
     font-weight: bold;
-    background: #fff;
+    background: transparent;
     padding: 0 10px;
-    color: #999;
-    transition: all .3s ease;
+    color: grey;
+    transition: all .5s ease-in-out;
   }
-  .form-item input:focus + label,
-  .form-item input:valid + label{
-    font-size: 11px;
-    top: -5px;
+  .url_collect input:focus + label,
+  .url_collect input:not(placeholder-show){
+    font-size: 15px;
+    top: -12px;
+    background: #0e1320;
   }
-  .form-item input:focus + label{
-    color: var(--global-color),
+  .url_collect input:focus + label{
+    color: var(--global-color);
   }
 // INPUT ANIMATION END 
-.url_collect label{
-    position: absolute;
-    top: 0;
-    font-size: 18px;
-    transform: translate(21px, 13px);
-}
-#urlpaset:focus + label{
-    transform:translateY(-5rem);
-    color: var(--global-color);
-}
 .url_collect button{
     padding: 15px 40px;
     background-color: var(--global-color);
@@ -246,7 +242,13 @@ p{
   /*LOADER END*/
 
   /*ABOUT PROJECT SECTION*/
-
+  .about_project, .about_psec, .back_change{
+    background: #0e1320;
+  }
+  .about_wrapp{
+    background: #0e1320;
+    padding-top: 0;
+  }
   #image1, #image2, #image3{
     object-fit: cover;
     border-radius: 20px;
@@ -266,6 +268,7 @@ p{
     height: 170px;
     transform: translateX(22.4rem);
   }
+
   .ab_left{
     padding: 5rem 0;
   }
@@ -322,11 +325,23 @@ p{
     padding-left: 15px;
     margin: 5px auto;
 }
+.idea_approach{
+    background: #0e1320;
+    padding: 50px;
+    display: block;
+}
+.idea_approach img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
 /*TOOLS SECTION*/
 .tools_section{
+    background: #0e1320;
     padding: 60px 0;
 }
 .tools_wrapp{
+    background: #0e1320;
     display:flex;
     padding-top: 50px;
     justify-content: space-around;
@@ -376,17 +391,37 @@ p{
 .about_team{
     padding: 0;
 }
-.team_wrap div, #name_div{
-    padding:0;
-    width:100px;
-    height:50px;
-    background: linear-gradient(to left,#5E5DFF, #FF048B);
+.about_team p{
+    font-size: 20px;
+    text-align: center;
+    color: #eee;
+    padding: 17px 50px 0 50px
+}
+.team_wrap h2, .team_wrap h5{
+    background: transparent;
+    color: transparent;
+}
+.wrap_theme{
+    border:none;
+    box-shadow: 0 0 30px rgb(8, 9, 22);
+    width: fit-content;
+    border-radius: 20px;
+    margin-left: 100px;
 }
 .team_wrap{
-    width: 50%;
-    // display: flex;
-    // justify-content: space-around;
-    // align-items: center;
+    background: linear-gradient(to bottom right, #5E5DFF, #FF06B8);
+    text-align: center;
+    background-clip: text;
+
+    padding: 50px;
+    & h5{
+        text-align: right;
+        margin: 22px;
+    }
+}
+.team_wrap:nth-child(1){
+    font-size: 24px;
+    font-weight: bold;
 }
 .about_r img:nth-child(1){
     width:200px;
@@ -442,6 +477,9 @@ label{
     border-radius: 20px;
     background-color: #181E2C;
     margin: 5px 0 15px 0;
+}
+#namee, #emaill, #txtarea{
+    outline: none;
 }
 .text:hover, .text:focus{
     box-shadow: 0 0 6px rgba(34, 34, 34, 0.822);
