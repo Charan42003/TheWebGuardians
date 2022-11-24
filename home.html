@@ -276,22 +276,22 @@
                         <img src="images/about_img3.jpg" alt="about_project" id="image3">
                         <div id="ro3"></div>
                     </div>
-                    <div class="cont_sec subsec contact_rigt" data-aos="fade-up" data-aos-duration="3000">
-                        <form action="#">
+                    <div class="cont_sec subsec contact_rigt single-form" data-aos="fade-up" data-aos-duration="3000">
+                        <form action="#" id="contactForm" method="POST">
                             <div class="name_email_wrap">
                                 <div class="name_div">
                                     <label for="namee">Name<span>*</span></label>
-                                    <input type="text" class="text name" id="namee">
+                                    <input type="text" class="text name contact_name" id="form_name">
                                 </div>
                                 <div class="email_div">
                                     <label for="emaill">Email<span>*</span></label>
-                                    <input type="text" class="text email" id="emaill">
+                                    <input type="email" class="text email" id="reply_to">
                                 </div>
                             </div>
                             <label for="txtarea">Message<span>*</span></label>
-                            <textarea class="text message" name="Message" id="txtarea" cols="50" rows="10"></textarea>
+                            <textarea class="text message" name="Message" id="message" cols="50" rows="10"></textarea>
                             <br>
-                            <button class="subscribe_button text">Subscribe</button>
+                            <button class="subscribe_button text" onsubmit="sendMail()">Subscribe</button>
                         </form>
                     </div>
                 </div>
@@ -313,6 +313,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./waitMe.js"></script>
     <script src="./script.js"></script>
+    <script src="./contact.js"></script>
 
     <script>
         function render() {

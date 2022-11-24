@@ -2,10 +2,12 @@ const btn = document.getElementById("btn");
 const output_scan = document.querySelector(".output");
 btn.addEventListener("click", function handleClick(event) {
   event.preventDefault();
+  //   event.target.reset();
 
   const url = document.getElementById("url").value;
   const encodedUrl = encodeURIComponent(url);
   console.log(encodedUrl);
+  document.getElementById("url").value = "";
   render();
 
   const request = new XMLHttpRequest();
@@ -59,7 +61,7 @@ btn.addEventListener("click", function handleClick(event) {
             <td>Parked Domain: <span>${data.parking}</span></td>
         </tr>
         <tr>
-            <td>HTTP Status Code: <span>${data.status}/span></td>
+            <td>HTTP Status Code: <span>${data.status_code}</span></td>
         </tr>
         <tr>
             <td>Web Server: <span>${data.server}</span></td>
